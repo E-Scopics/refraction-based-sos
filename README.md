@@ -7,9 +7,10 @@ We propose here a code sample that implements the method proposed in:
 This code is for research purposes only. No commercial use. Do not redistribute.
 If you use the code or the algorithm for research purpose, please cite the above paper.
 
-This code is an explicit version of the code used to obtain the results presented in the above paper. It reproduces the simulation results. For readability reasons, it is not optimized and may take a few minutes to run.
+This code is an explicit version of the code used to obtain the results presented in the above paper. It reproduces the simulation results. For readability reasons, it is not optimized and may take a few minutes to run. 
 
-For further data, results reproduction or any question, please contact the author Baptiste Hériard-Dubreuil <baptiste.heriard-dubreuil@e-scopics.com>.
+This code is made public for illustration purposes and may not yield exactly the same results as the ones presented in the paper.
+For exact results reproduction or any question, please contact the author Baptiste Hériard-Dubreuil <baptiste.heriard-dubreuil@e-scopics.com>.
 
 
 ## Code Layout
