@@ -14,6 +14,16 @@ def two_signals_sos_estimation(h, tx_angle, h_prime, tx_angle_prime,
                                gamma, sampling_frequency, demodulation_frequency, 
                                excitation_frequency, c_th, initial_times, 
                                initial_times_prime, pitch, filter_sample_nb):
+    """Estimate SOS from a pair of signals.
+    Args:
+        - h: Element-raw-data corresponding to the first PW Tx
+        - tx_angle: Angle of the said PW
+        - h_prime: Element-raw-data of the second PW Tx
+        - tx_angle_prime: Angle of the second PW
+    Returns:
+        - sos: The estimated profile
+        - w: The weight associated to this profile (used for the weighted average).
+    """
     # Deduce rx angles and half-differences (delta)
     rx_angle = 2*gamma - tx_angle
     rx_angle_prime = 2*gamma - tx_angle_prime
@@ -43,6 +53,12 @@ def multiple_signals_sos_estimation(h_list, tx_angle_list, gamma_list,
                                     sampling_frequency, demodulation_frequency, 
                                     excitation_frequency, c_th, initial_times_list, 
                                     pitch, filter_sample_nb):
+    """Estimate the SOS profile from several PW transmits and a list of mid-angles.
+    Args:
+        - h_list: List of element-raw-data corresponding to all the PW Tx.
+        - tx_angle_list: List of all the angles of the said PW
+        - gamma_list: List of desired mid-angles
+    """
     # Loop over all pairs    
     sos_list = []
     w_list = []
